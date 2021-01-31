@@ -94,7 +94,7 @@ class SubscriptionService
             if($sub->status=='canceled'){
                 event(new Canceled([$device_detail->appID,$device_detail->uID])); //trigger event for cancelled
             }
-            return $sub->status;
+            return response()->json(['response'=>$sub->status,'status'=> 200]);
         }
         
     }

@@ -44,8 +44,8 @@ class SubscriptionChange
         $appID = $event->device_details->appID; //app id
 
         $event_type = $type;
-        //some 3rd party api
-        
+        //some 3rd party api. Uncomment the following code if using vhost or actual domain and replace the actual domain url
+
         // Http::post('http://localhost:8000/api/thirdparty', [
         //     'uID' => $uID,
         //     'appID' => $appID,
