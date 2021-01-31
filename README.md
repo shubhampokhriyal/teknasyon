@@ -11,6 +11,7 @@
 - Run ``php artisan migrate`` only if you have not imported the sql file provided in my email.
 - Run ``php artisan route:list`` for displaying the api routes in the application.
 - POSTMAN is used to test the APIs
+- teknasyon.sql is added to this directory. Import if you do not want to use ``php artisan migrate``
 - Had only weekend to work on it due to office work on weekdays.
 - Event and listeners are created in the application which eventually send POST request to 3rd party API for change in subscription status. But the request is being commented because ``php artisan serve`` does not support guzzlehttp commands. Please uncomment if using vhost instead of ``php artisan serve``.
 - Was not able to understand the cron part as they are done on server but I have made a api which can be called via cron job.
