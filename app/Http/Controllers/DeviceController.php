@@ -23,6 +23,7 @@ class DeviceController extends Controller
     }
     
     public function thirdparty(Request $request) {
+        Log::info("third-party");
         Log::info(response()->json($request, 200));
     }
 

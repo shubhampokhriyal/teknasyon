@@ -68,7 +68,7 @@ class SubscriptionService
                 'status'=>'started',
                 'expiry_date'=>$expiry_date
             ]);
-            event(new Renewed([$device_detail->appID,$device_detail->uID])); //trigger event for renewed sub
+            event(new Renewed($device_detail)); //trigger event for renewed sub
             return response()->json(['response'=>"Subscription renewed",'status'=> 200,'expiry_date'=>$expiry_date]);
         }
     }
@@ -118,7 +118,7 @@ class SubscriptionService
         $lastChar=substr($receipt, -1);
         $number = (int) $lastChar;
         if($number%2 != 0){
-            Log::info(['receipt'=>$receipt,'username'=>$username]);
+            // Log::info(['receipt'=>$receipt,'username'=>$username]);
             return ['expiry_date'=>date('Y-m-d H:i:s',strtotime('+1 months'))];
         }
         return false;

@@ -14,7 +14,6 @@ class Canceled
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
     public $device_details;
-    public $type;
     /**
      * Create a new event instance.
      *
@@ -23,16 +22,5 @@ class Canceled
     public function __construct($device_details)
     {
         $this->device_details = $device_details;
-        $this->type = 'Cenceled';
-    }
-
-    /**
-     * Get the channels the event should broadcast on.
-     *
-     * @return \Illuminate\Broadcasting\Channel|array
-     */
-    public function broadcastOn()
-    {
-        return new PrivateChannel('channel-name');
     }
 }

@@ -26,14 +26,4 @@ class Started
         $this->device_details = $device_details;
         $this->type = 'Started';
     }
-
-    /**
-     * Get the channels the event should broadcast on.
-     *
-     * @return \Illuminate\Broadcasting\Channel|array
-     */
-    public function broadcastOn()
-    {
-        return new PrivateChannel('channel-name');
-    }
 }
