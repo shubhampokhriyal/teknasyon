@@ -21,7 +21,7 @@
 - Type - POST
 - Body - {'uID':'11242','appID':'345','language':'HN','os':'android'}
 
-## Subscrion Purchase
+## Subscription Purchase
 
 - Request URL - http://localhost:8000/api/subscription/purchase
 - Type - POST
